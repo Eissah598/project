@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Cricket</title>
+    </head>
+    <body>
+        <h2>welcome to cricket</h2>
+        <table>
+            <tr>
+
+                <td>sun</td>
+                <td>Mon</td>
+                <td>Tues</td>
+                <td>Wed</td>
+                <td>Thurs</td>
+                <td>fri</td>
+                <td>sat</td>
+            
+            </tr>
+            <tr>
+                <td id="demo"></td>
+            </tr>
+        </table>
+        <p id="demo"></p>
+        <script>
+            var date = new Date(), y = date.getFullYear(), m = date.getMonth();
+            var firstDay = new Date(y, m, 1);
+            var n = firstDay.getDay()
+            console.log(n)
+            var day = firstDay.toString().split(" ")[0];
+            var counter=1;
+            for(i=n;i<=6;i++){
+                document.write(counter);
+                counter++;
+            }
+            for(i=1;i<=5;i++){
+                for(j=0;j<=6;j++){
+                    document.write(counter);
+                    counter++;
+                    if(counter === "31"){
+                        break;
+                    }
+                }
+            }
+            document.getElementById("demo").innerHTML = day;
+        </script>
+    </body>
+</html>

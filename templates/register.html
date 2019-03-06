@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Registration</title>
+    </head>
+    <body>
+        <form action = "{{url_for('register')}}" method="POST">
+            <div id="container">
+                <table>
+                    <tr>
+                        <td><label>Registration Id</label></td>
+                        <td>:&nbsp;<input type="text" name="regdId" id="regdId"></td>
+                    </tr>
+                    <tr>
+                        <td><label>First Name</label></td>
+                        <td>:&nbsp;<input type="text" name="fname" id="fname"></td>
+                    </tr>
+                    <tr>
+                        <td><label>Last Name</label></td>
+                        <td>:&nbsp;<input type="text" name="lname" id="lname"></td>
+                    </tr>
+                    <tr>
+                        <td><label>email</label></td>
+                        <td>:&nbsp;<input type="email" name="email" id="email"></td>
+                    </tr>
+                    <tr>
+                        <td><label>Phone</label></td>
+                        <td>:&nbsp;<input type="number" name="phone" id="phone"></td>
+                    </tr>
+                    <tr>
+                        <td><label>Year</label></td>
+                        <td>:&nbsp;<input type="number" name="year" id="year"></td>
+                    </tr>
+                    <tr>
+                        <td><label>Branch</label></td>
+                        <td>:&nbsp;<input type="text" name="branch" id="branch"></td>
+                    </tr>
+                    <tr>
+                        <td><label>address</label></td>
+                        <td>:&nbsp;<input type="text" name="address" id="address"></td>
+                    </tr>
+                    <tr>
+                        <td><label>password</label></td>
+                        <td>:&nbsp;<input type="password" name="password" id="password"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="submit" value="submit"></td>
+                    </tr>
+                </table>
+            </div>
+            <a href="/login">login</a>
+        </form>
+    </body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Driving</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <ul class="nav navbar-nav">
+                <li><a href="{{url_for('main')}}"><span class="glyphicon glyphicon-arrow-left"></span>Back</a></li>
+            </ul>
+            <div class="navbar-header">
+                <a class="navbar-brand" href="{{url_for('driving')}}">driving school</a>
+            </div>
+            <ul class="nav navbar-nav">
+                <li><a href="{{url_for('main')}}">Home</a></li>
+                <li class="active"><a href="{{url_for('driving')}}">Page 1</a></li>
+                <li><a href="{{url_for('swimming')}}">Page 2</a></li>
+                <li><a href="#">Page 3</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right active">
+                <li><a href="{{url_for('logout')}}"><span class="glyphicon glyphicon-log-out"></span>Log Out</a></li>
+            </ul>
+        </div>
+    </nav>
+    {{user['username']}}
+    {% if stud == "No students found" %}
+    {{stud}}
+    {% else %}
+    {% if match == "No Match Found" %}
+
+    <form action="{{url_for('driving')}}" method="POST">
+        <input type="submit" value="register">
+    </form>
+    {% else %}
+    {% if match.status == 0 %}
+    <h3>pending</h3>
+    {{match.status}}
+    {% elif match.status > 0 and match.status <= 99 %}
+    <h3>Inprogress</h3>
+    {% endif %}
+    {% endif %}
+    {% endif %}
+
+
+</body>
+
+</html>

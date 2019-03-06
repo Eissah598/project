@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+  <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='login.css')}}">
+
+</head>
+
+<body>
+  <div class="login">
+    <div class="container">
+
+      <div class="col-lg-8 col-lg-offset-2 login-box">
+
+        <div class="col-lg-6 right-box">
+          <h1>Login</h1>
+
+          <div class="form">
+            <form action="{{url_for('login')}}" method="POST">
+              <div class="form-group">
+                <label for="username">Your usersname </label>
+                <input type="text" id="username" name="usrName" class="form-control">
+
+              </div>
+
+              <div class="form-group">
+                <label for="password">Your password</label>
+                <input type="password" id="password" name="password" class="form-control">
+
+              </div>
+
+              <div class="login-button">
+                <input type="submit" value=Login class="btn btn-default">
+              </div>
+            </form>
+            <a href="#">Forget Password</a>
+            <br>
+            <a href="{{url_for('register')}}">Register</a>
+          </div>
+
+        </div> <!-- right-box -->
+
+        <div class="col-lg-6 left-box">
+          <h1>Welcome</h1>
+          <img src="{{url_for('static', filename='vishnu_logo.png')}}" width=150 height=150>
+          <br>
+          <br>
+          <br>
+          <p>Vishnu Educational Society Provides a good learning</p>
+          <br>
+        </div>
+
+      </div>
+      <!--col-lg-8-->
+
+    </div>
+  </div>
+</body>
+
+</html>
